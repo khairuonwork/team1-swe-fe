@@ -8,17 +8,19 @@ import { Separator } from "@/components/ui/separator";
 
 export default function LoginForm() {
   return (
-    <div className="min-h-screen grid grid-cols-1 md:grid-cols-2">
-      {/* Left Column: Login Form */}
-      <div className="flex items-center justify-center p-8 bg-white">
+    <div className="h-screen grid grid-cols-1 md:grid-cols-2">
+      {/* Left: Login Form */}
+      <div className="flex items-center justify-center px-6 md:px-12 bg-white">
         <div className="w-full max-w-md space-y-6">
-          <div className="text-center space-y-1">
+          {/* Header */}
+          <div className="text-start space-y-1">
             <h1 className="text-2xl font-bold">Masuk</h1>
             <p className="text-sm text-muted-foreground">
               Cari pekerjaan sesuai minat kamu! 💼
             </p>
           </div>
 
+          {/* Google Button */}
           <Button variant="outline" className="w-full flex items-center gap-2">
             <img
               src="https://www.svgrepo.com/show/475656/google-color.svg"
@@ -30,6 +32,7 @@ export default function LoginForm() {
 
           <Separator className="my-2" />
 
+          {/* Form */}
           <form className="space-y-4">
             <div>
               <label className="block text-sm font-medium">
@@ -63,11 +66,12 @@ export default function LoginForm() {
             </Button>
           </form>
 
+          {/* Footer */}
           <div className="text-center text-sm">
             Belum punya akun?{" "}
             <Link
               href="/register"
-              className="font-semibold text-black hover:underline"
+              className="font-semibold hover:underline text-black"
             >
               Buat akun
             </Link>
@@ -81,12 +85,12 @@ export default function LoginForm() {
         </div>
       </div>
 
-      {/* Right Column: Full Image (no rounded corner) */}
-      <div className="hidden md:block h-full w-full">
+      {/* Right: Image */}
+      <div className="hidden md:block h-full w-full overflow-hidden">
         <img
           src="/login-banner/login-banner.jpg"
-          alt="Login Visual"
-          className="w-full h-full object-cover rounded-3xl"
+          alt="Login Banner career_ly"
+          className="w-full h-full object-cover rounded-3xl scale-80"
         />
       </div>
     </div>
